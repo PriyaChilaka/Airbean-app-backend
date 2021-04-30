@@ -3,7 +3,7 @@ const { Router } = require('express');
 const router = new Router();
 
 const menu = require('../menu.json');
-const { addAccount, addOrder, getOrder } = require('../controllers/database');
+const { addAccount, addOrder, getOrder } = require('../handlers/database');
 
 router.get('/coffee', (req, res) => {
   res.send(menu);
