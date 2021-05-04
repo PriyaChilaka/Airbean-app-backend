@@ -56,7 +56,11 @@ function getOrder(ID) {
     const orderHistory = database.get('orders').filter({ userID: userID }).value()
    
 
-  return orderHistory;
+   
+    console.log('userId:', userID);
+
+    console.log('orderHistory:', orderHistory);
+     return orderHistory;
     
 }
 
