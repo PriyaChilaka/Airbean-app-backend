@@ -35,22 +35,21 @@ function addAccount(body) {
 
 function addOrder(body) {
     const order = body
-    console.log('Oder Info:',order)
+    console.log('Oder Info:', order)
     
-  let orderID = Math.floor(Math.random() * 100) + 1;
-  let eta = Math.floor(Math.random() * 10) + 2;
-  let time = moment().format('H:m');
+    let orderID = Math.floor(Math.random() * 100) + 1;
+    let eta = Math.floor(Math.random() * 10) + 2;
+    let time = moment().format('H:m');
 
-  if (database.get('orders').find({ orderID: orderID }).value()) {
-    orderID = Math.floor(Math.random() * 100) + 1;
-  }
+    if (database.get('orders').find({ orderID: orderID }).value()) {
+        orderID = Math.floor(Math.random() * 100) + 1;
+    }
 
-  database.get('orders').push({ orderID: orderID, menuID: order.menuID, userID: order.userID, eta: eta ,time:time}).write();
+    database.get('orders').push({ orderID: orderID, menuID: order.menuID, userID: order.userID, eta: eta, time: time }).write();
 
-  return `Order Added. ID: ${orderID} ETA: ${eta} min`;
+    return `Order Added. ID: ${orderID} ETA: ${eta} min`;
  
 }
-rrrrrrrrrrrrrrrr
 function getOrder(ID) {
     const userID = parseInt(ID);
     console.log('Order Details:',userID)
