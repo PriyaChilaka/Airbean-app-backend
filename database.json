@@ -1,82 +1,21 @@
-{
-  "accounts": [
-    {},
+{  "accounts": [
     {
-      "orderID": 102,
-      "title": "Coffee",
-      "eta": 8,
-      "price": 60,
-      "time": "10.45",
-      "userId": "gaj-f4j",
-      "orderNumber": "Tov"
-    },
-    {
-      "username": "priya235",
-      "password": "almigh5678"
-    },
-    {}
+      "username":"priya",
+     "password":"almighty79"
+    }
   ],
   "orders": [
     {
-      "orderID": 89,
-      "eta": 4,
-      "time": "15:58"
-    },
-    {},
-    {},
-    {
-      "orderID": 89,
-      "eta": 4,
-      "time": "15:58"
+      "orderID": 1122,
+      "menuID": 6,
+      "userID": 2,
+      "eta": 6
     },
     {
-      "orderID": 89,
-      "eta": 4,
-      "time": "15:58"
-    },
-    {
-      "orderID": 102,
-      "title": "Coffee",
-      "eta": 8,
-      "price": 60,
-      "time": "10.45",
-      "userId": "gaj-f4j",
-      "orderNumber": "Tov"
-    },
-    {
-      "orderID": 102,
-      "title": "Coffee",
-      "eta": 8,
-      "price": 60,
-      "time": "10.45",
-      "userId": "gaj-f4j",
-      "orderNumber": "Tov"
-    },
-    {
-      "orderID": 26,
-      "eta": 9,
-      "time": "11:50"
-    },
-    {
-      "orderID": 7,
-      "eta": 8,
-      "time": "12:22"
-    },
-    {
-      "orderID": 2,
-      "eta": 2,
-      "time": "14:9"
-    },
-    {
-      "orderID": 21,
-      "eta": 4,
-      "time": "14:36"
-    },
-    {
-      "orderID": 54,
-      "eta": 5,
-      "time": "14:42"
+      "orderID": 1222,
+      "menuID": 6,
+      "userID": 1,
+      "eta": 4
     }
-  ],
-  "menu": []
+  ]
 }
