@@ -10,11 +10,11 @@ const database = lowdb(adapter);
 const moment = require('moment');
 
 function initiateDatabase() {
-  database.defaults({ accounts: [], orders: [] }).write();
+  database.defaults({ accounts: [], orders: [] },{menu:[]}).write();
 }
 /** To return a coffee menu*/
 function getCoffee() {
-     
+     const menu = database.get('menu').value()
  }                                                                                           
 function addAccount(body) {
   const account = body;
@@ -36,8 +36,18 @@ function addAccount(body) {
 function addOrder(body) {
     const order = body
     console.log('Oder Info:',order)
-    return database.get('orders').push(order).write()
     
+  let orderID = Math.floor(Math.random() * 100) + 1;
+  let eta = Math.floor(Math.random() * 10) + 2;
+  
+
+  if (database.get('orders').find({ orderID: orderID }).value()) {
+    orderID = Math.floor(Math.random() * 100) + 1;
+  }
+
+  database.get('orders').push({ orderID: orderID, menuID: order.menuID, userID: order.userID, eta: eta }).write();
+
+  return `Order Added. ID: ${orderID} ETA: ${eta} min`;
  
 }
 
@@ -53,7 +63,7 @@ function getOrder(ID) {
 
   if (orderHistory.length > 0) {
     result.success = true;
-    result.orderHistory = orderExists;
+    result.orderHistory = orderHistory;
   } else {
     result.success = false;
     result.message = "You haven't placed an order yet";
