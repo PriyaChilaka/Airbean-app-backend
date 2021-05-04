@@ -1,23 +1,17 @@
 {
   "accounts": [
-   
     {
       "username": "priya235",
       "password": "almigh5678"
     },
-    
-    
-      {
-        "username": "priya",
-        "password": "almighty79"
-      }
-    
-    ,
-      {
-        "username": "gnk",
-        "password": "fkhfks"
-      }
-    
+    {
+      "username": "priya",
+      "password": "almighty79"
+    },
+    {
+      "username": "gnk",
+      "password": "fkhfks"
+    }
   ],
   "orders": [
     {
@@ -84,6 +78,11 @@
       "orderID": 73,
       "eta": 8,
       "time": "15:6"
+    },
+    {
+      "orderID": 31,
+      "eta": 7,
+      "time": "15:27"
     }
   ],
   "menu": []

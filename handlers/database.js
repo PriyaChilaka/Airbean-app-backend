@@ -14,7 +14,8 @@ function initiateDatabase() {
 }
 /** To return a coffee menu*/
 function getCoffee() {
-     const menu = database.get('menu').value()
+    const menu = database.get('menu').value()
+    
  }                                                                                           
 function addAccount(body) {
   const account = body;
@@ -51,13 +52,13 @@ function addOrder(body) {
  
 }
 function getOrder(ID) {
-    const userID = parseInt(ID);
-    console.log('Order Details:',userID)
-    const orderHistory = database.get('orders').filter({ userID: userID }).value()
+    const userId = parseInt(ID);
+    console.log('Order Details:',userId)
+    const orderHistory = database.get('orders').filter({ userId: userId }).value()
    
 
    
-    console.log('userId:', userID);
+    console.log('userId:', userId);
 
     console.log('orderHistory:', orderHistory);
      return orderHistory;
