@@ -1,6 +1,19 @@
 {
   "accounts": [
-    {}
+    {},
+    {
+      "orderID": 102,
+      "title": "Coffee",
+      "eta": 8,
+      "price": 60,
+      "time": "10.45",
+      "userId": "gaj-f4j",
+      "orderNumber": "Tov"
+    },
+    {
+      "username": "priya235",
+      "password": "almigh5678"
+    }
   ],
   "orders": [
     {
@@ -37,6 +50,17 @@
       "time": "10.45",
       "userId": "gaj-f4j",
       "orderNumber": "Tov"
+    },
+    {
+      "orderID": 26,
+      "eta": 9,
+      "time": "11:50"
+    },
+    {
+      "orderID": 7,
+      "eta": 8,
+      "time": "12:22"
     }
-  ]
+  ],
+  "menu": []
 }

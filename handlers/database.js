@@ -1,5 +1,5 @@
 
-const { request } = require('express');
+const { request, response } = require('express');
 const { nanoid } = require('nanoid');
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
@@ -50,26 +50,14 @@ function addOrder(body) {
   return `Order Added. ID: ${orderID} ETA: ${eta} min`;
  
 }
-
+rrrrrrrrrrrrrrrr
 function getOrder(ID) {
     const userID = parseInt(ID);
     console.log('Order Details:',userID)
     const orderHistory = database.get('orders').filter({ userID: userID }).value()
-    console.log( orderHistory)
-    const result = {
-    success: false,
-    orderHistory: false,
-  };
+   
 
-  if (orderHistory.length > 0) {
-    result.success = true;
-    result.orderHistory = orderHistory;
-  } else {
-    result.success = false;
-    result.message = "You haven't placed an order yet";
-  }
-
-  res.json(result);
+  return orderHistory;
     
 }
 
