@@ -5,20 +5,20 @@ const router = new Router();
 const menu = require('../menu.json');
 const { addAccount, addOrder, getOrder } = require('../handlers/database');
 
-router.get('/coffee', (req, res) => {
-  res.send(menu);
+router.get('/coffee', (request, response) => {
+  response.send(menu);
 });
 
-router.post('/account', (req, res) => {
-  res.json(addAccount(req.body));
+router.post('/account', (request, response) => {
+  response.json(addAccount(request.body));
 });
 
-router.post('/order', (req, res) => {
-  res.json(addOrder(req.body));
+router.post('/order', (request, response) => {
+  response.json(addOrder(request.body));
 });
 
-router.get('/order/:id', (req, res) => {
-  res.json(getOrder(req.params.id));
+router.get('/order/:id', (request, response) => {
+  response.json(getOrder(request.params.id));
 });
 
 module.exports = router;

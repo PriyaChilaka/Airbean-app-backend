@@ -1,10 +1,23 @@
+const lowdb = require('lowdb');
 
 const express = require('express');
 
-const coffeeRouter = require('./routes/index');
-const { initiateDatabase } = require('./handlers/database');
+const FileSync = require('lowdb/adapters/FileSync')
 
-const app = express();
+const coffeeRouter = require('./routes/index')
+const { initiateDatabase } = require('./handlers/database')
+
+const adapter = new FileSync('accounts.json')
+
+const database = lowdb(adapter)
+
+const app = express()
+
+//function initiateDatabase() {
+ // database.defaults({ accounts: [] }).write()
+//
+
+
 
 app.use(express.json());
 app.use('/api/', coffeeRouter);

@@ -1,4 +1,26 @@
 {
-  "accounts": [],
-  "orders": []
+  "accounts": [
+    { 
+      "username": "priya235",
+      "password": "almigh5678"}
+  ],
+  "orders": [
+    {
+      "orderID": 89,
+      "eta": 4,
+      "time": "15:58"
+    },
+    {},
+    {},
+    {
+      "orderID": 89,
+      "eta": 4,
+      "time": "15:58"
+    },
+    {
+      "orderID": 89,
+      "eta": 4,
+      "time": "15:58"
+    }
+  ]
 }
