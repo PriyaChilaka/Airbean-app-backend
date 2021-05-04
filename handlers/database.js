@@ -39,13 +39,13 @@ function addOrder(body) {
     
   let orderID = Math.floor(Math.random() * 100) + 1;
   let eta = Math.floor(Math.random() * 10) + 2;
-  
+  let time = moment().format('H:m');
 
   if (database.get('orders').find({ orderID: orderID }).value()) {
     orderID = Math.floor(Math.random() * 100) + 1;
   }
 
-  database.get('orders').push({ orderID: orderID, menuID: order.menuID, userID: order.userID, eta: eta }).write();
+  database.get('orders').push({ orderID: orderID, menuID: order.menuID, userID: order.userID, eta: eta ,time:time}).write();
 
   return `Order Added. ID: ${orderID} ETA: ${eta} min`;
  
