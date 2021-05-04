@@ -1,3 +1,6 @@
+
+const { request } = require('express');
+const { nanoid } = require('nanoid');
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 
@@ -9,7 +12,10 @@ const moment = require('moment');
 function initiateDatabase() {
   database.defaults({ accounts: [], orders: [] }).write();
 }
-
+/** To return a coffee menu*/
+function getCoffee() {
+     
+ }                                                                                           
 function addAccount(body) {
   const account = body;
   console.log('Account Info:', account);
@@ -28,31 +34,33 @@ function addAccount(body) {
 }
 
 function addOrder(body) {
-  const order = body;
-  let orderID = Math.floor(Math.random() * 100) + 1;
-  let eta = Math.floor(Math.random() * 10) + 2;
-  let time = moment().format('H:m');
-
-  if (database.get('orders').find({ orderID: orderID }).value()) {
-    orderID = Math.floor(Math.random() * 100) + 1;
-  }
-
-  database.get('orders').push({ orderID: orderID, menuID: order.menuID, userID: order.userID, eta: eta, time: time }).write();
-
-  return `Order Added. ID: ${orderID} ETA: ${eta} min`;
+    const order = body
+    console.log('Oder Info:',order)
+    return database.get('orders').push(order).write()
+    
+ 
 }
 
 function getOrder(ID) {
-  const userID = parseInt(ID);
-  const orderHistory = database.get('orders').filter({ userID: userID }).value();
+    const userID = parseInt(ID);
+    console.log('Order Details:',userID)
+    const orderHistory = database.get('orders').filter({ userID: userID }).value()
+    console.log( orderHistory)
+    const result = {
+    success: false,
+    orderHistory: false,
+  };
 
-  let timeNow = moment().format('H:m');
-  let timeBefore = parseInt(database.get('orders').filter({ userID: userID }).map('time').value());
+  if (orderHistory.length > 0) {
+    result.success = true;
+    result.orderHistory = orderExists;
+  } else {
+    result.success = false;
+    result.message = "You haven't placed an order yet";
+  }
 
-  console.log(timeBefore);
-  console.log('Time:', timeNow);
-
-  return orderHistory;
+  res.json(result);
+    
 }
 
 exports.initiateDatabase = initiateDatabase;
