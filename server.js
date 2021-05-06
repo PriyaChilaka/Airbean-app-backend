@@ -16,9 +16,6 @@ const app = express()
 //function initiateDatabase() {
  // database.defaults({ accounts: [] }).write()
 //
-
-
-
 app.use(express.json());
 app.use('/api/', coffeeRouter);
 
