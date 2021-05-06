@@ -16,7 +16,7 @@ function initiateDatabase() {
 function getCoffee() {
     const menu = database.get('menu').value()
     
- }                                                                                           
+ }                                                                               //To add account            
 function addAccount(body) {
   const account = body;
   console.log('Account Info:', account);
@@ -33,7 +33,7 @@ function addAccount(body) {
 
   return result;
 }
-
+//to add order for specific user
 function addOrder(body) {
     const order = body
     console.log('Oder Info:', order)
@@ -51,15 +51,12 @@ function addOrder(body) {
     return `Order Added. ID: ${orderID} ETA: ${eta} min`;
  
 }
+//To see order history
 function getOrder(ID) {
     const userId = parseInt(ID);
     console.log('Order Details:',userId)
     const orderHistory = database.get('orders').filter({ userId: userId }).value()
-   
-
-   
     console.log('userId:', userId);
-
     console.log('orderHistory:', orderHistory);
      return orderHistory;
     
