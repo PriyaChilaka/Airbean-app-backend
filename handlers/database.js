@@ -52,8 +52,8 @@ function addOrder(body) {
  
 }
 //To see order history
-function getOrder(ID) {
-    const userId = parseInt(ID);
+function getOrder(userId) {
+    //const userId = ID;
     console.log('Order Details:',userId)
     const orderHistory = database.get('orders').filter({ userId: userId }).value()
     console.log('userId:', userId);
