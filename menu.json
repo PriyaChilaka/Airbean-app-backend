@@ -37,5 +37,121 @@
       "price": 39
     }
   ],
-  "coffees": []
+  "coffees": [],
+  "orders": [
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "RRP",
+      "ETA": "2021-09-23 15:52:16",
+      "orderTime": "15:45"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "ws_",
+      "ETA": "2021-09-23 16:06:10",
+      "orderTime": "15:59"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "xuo",
+      "ETA": "2021-09-23 16:10:24",
+      "orderTime": "16:02"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "4_z",
+      "ETA": "2021-09-23 16:18:04",
+      "orderTime": "16:11"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "5hL",
+      "ETA": "2021-09-23 17:18:54",
+      "orderTime": "17:15"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "_R-",
+      "ETA": "2021-09-23 17:31:36",
+      "orderTime": "17:28"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": "MlTRNH0iJf",
+      "orderNumber": "dWh",
+      "ETA": "2021-09-23 17:39:52",
+      "orderTime": "17:36",
+      "status": "Delivered "
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": "7zInt3r6Lf",
+      "orderNumber": "QR5",
+      "ETA": "2021-09-23 17:54:08",
+      "orderTime": "17:46",
+      "status": "Delivered "
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": "7zInt3r6Lf",
+      "orderNumber": "3oY",
+      "ETA": "2021-09-23 18:18:42",
+      "orderTime": "18:14",
+      "status": "Coffee coming up"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": [],
+      "orderNumber": "a1P",
+      "ETA": "2021-09-23 18:22:24",
+      "orderTime": "18:17"
+    },
+    {
+      "id": [],
+      "title": [],
+      "price": 0,
+      "userId": "7zInt3r6Lf",
+      "orderNumber": "O3r",
+      "ETA": "2021-09-23 18:39:00",
+      "orderTime": "18:33"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "7zInt3r6Lf",
+      "username": "priya",
+      "password": "almighty79"
+    },
+    {
+      "id": "MlTRNH0iJf",
+      "username": "cute",
+      "password": "priya"
+    }
+  ]
 }

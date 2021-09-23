@@ -1,24 +1,38 @@
-  
-const { Router } = require('express');
+const { Router } = require("express");
+const {
+  getMenu,
+  postOrder,
+  addAccount,
+  getOrderHistory,
+  login,
+} = require("../handlers/database.js");
+
 const router = new Router();
 
-const menu = require('../menu.json');
-const { addAccount, addOrder, getOrder } = require('../handlers/database');
-//Router for get coffee
-router.get('/coffee', (request, response) => {
-  response.send(menu);
+router.get("/coffee", (req, res) => {
+  res.json(getMenu());
 });
-//Router for addAccount
-router.post('/account', (request, response) => {
-  response.json(addAccount(request.body));
+
+router.post("/order", (req, res) => {
+  const orderDetails = req.body;
+  res.json(postOrder(orderDetails));
 });
-//Router for addOrder
-router.post('/order', (request, response) => {
-  response.json(addOrder(request.body));
+
+// Creating a user-account
+router.post("/account", (req, res) => {
+  const account = req.body;
+  res.json(addAccount(account));
 });
-//Router for orderHistory
-router.get('/order/:id', (request, response) => {
-  response.json(getOrder(request.params.id));
+
+//Get specific order/orderhistory later
+router.get("/order/:id", (req, res) => {
+  const userId = req.params.id;
+  res.json(getOrderHistory(userId));
+});
+
+router.post("/login", (req, res) => {
+  let user = req.body;
+  res.json(login(user));
 });
 
 module.exports = router;
