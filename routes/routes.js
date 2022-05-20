@@ -5,7 +5,7 @@ const {
   addAccount,
   getOrderHistory,
   login,
-} = require("../handlers/database.js");
+} = require("../handlers/db-handlers.js");
 
 const router = new Router();
 

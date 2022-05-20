@@ -79,24 +79,25 @@ function addAccount(account) {
   // If username doesnt exist, write account-details to DB
   // and append a random ID with 10 characters
   if (!result.userNameExists) {
-    let userId = nanoid(10)
     database
       .get("accounts")
       .push({
-        id: userId,
+        id: nanoid(10),
         username: account.username,
         password: account.password,
         email: account.email,
       })
       .write();
-      result.userId=userId;
     result.success = true;
-    result.userNameExists = account;
+    result.userNameExists = {
+      username: account.username,
+      password: account.password,
+      email: account.email,
+    };
     result.message = "Successfully created account";
   }
   return result;
 }
-
 function login(account) {
   let result = {};
   const userNameExists = database
@@ -110,17 +111,17 @@ function login(account) {
     account.password === userNameExists.password
   ) {
     result = {
-      loggedIn: true,
+      success: true,
       username: userNameExists.username,
       password: userNameExists.password,
       id: userNameExists.id,
+      email: userNameExists.email,
     };
   } else {
-    result = { loggedIn: false };
+    result = { success: false };
   }
   return result;
 }
-
 function getOrderHistory(userId) {
   const order = database.get("orders").filter({ userId: userId }).value();
   let fullOrder = [];

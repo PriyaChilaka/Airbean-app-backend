@@ -37,121 +37,118 @@
       "price": 39
     }
   ],
-  "coffees": [],
   "orders": [
     {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "RRP",
-      "ETA": "2021-09-23 15:52:16",
-      "orderTime": "15:45"
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "ws_",
-      "ETA": "2021-09-23 16:06:10",
-      "orderTime": "15:59"
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "xuo",
-      "ETA": "2021-09-23 16:10:24",
-      "orderTime": "16:02"
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "4_z",
-      "ETA": "2021-09-23 16:18:04",
-      "orderTime": "16:11"
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "5hL",
-      "ETA": "2021-09-23 17:18:54",
-      "orderTime": "17:15"
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "_R-",
-      "ETA": "2021-09-23 17:31:36",
-      "orderTime": "17:28"
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": "MlTRNH0iJf",
-      "orderNumber": "dWh",
-      "ETA": "2021-09-23 17:39:52",
-      "orderTime": "17:36",
-      "status": "Delivered "
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": "7zInt3r6Lf",
-      "orderNumber": "QR5",
-      "ETA": "2021-09-23 17:54:08",
-      "orderTime": "17:46",
-      "status": "Delivered "
-    },
-    {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": "7zInt3r6Lf",
-      "orderNumber": "3oY",
-      "ETA": "2021-09-23 18:18:42",
-      "orderTime": "18:14",
+      "id": [
+        1,
+        2,
+        3
+      ],
+      "title": [
+        "Bryggkaffe",
+        "Caffè Doppio",
+        "Cappuccino"
+      ],
+      "price": 137,
+      "userId": "ykXwGos9D8",
+      "orderNumber": "9Nq",
+      "ETA": "2021-06-17 21:52:46",
+      "orderTime": "21:49",
       "status": "Coffee coming up"
     },
     {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": [],
-      "orderNumber": "a1P",
-      "ETA": "2021-09-23 18:22:24",
-      "orderTime": "18:17"
+      "id": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "title": [
+        "Bryggkaffe",
+        "Bryggkaffe",
+        "Bryggkaffe",
+        "Bryggkaffe"
+      ],
+      "price": 156,
+      "userId": "ykXwGos9D8",
+      "orderNumber": "eTH",
+      "ETA": "2021-06-17 21:58:05",
+      "orderTime": "21:50"
     },
     {
-      "id": [],
-      "title": [],
-      "price": 0,
-      "userId": "7zInt3r6Lf",
-      "orderNumber": "O3r",
-      "ETA": "2021-09-23 18:39:00",
-      "orderTime": "18:33"
+      "id": [
+        1,
+        2,
+        3
+      ],
+      "title": [
+        "Bryggkaffe",
+        "Caffè Doppio",
+        "Cappuccino"
+      ],
+      "price": 137,
+      "userId": "LRBBi_a21u",
+      "orderNumber": "fb0",
+      "ETA": "2022-05-20 22:05:44",
+      "orderTime": "22:00",
+      "status": "Delivered "
+    },
+    {
+      "id": [
+        1,
+        2
+      ],
+      "title": [
+        "Bryggkaffe",
+        "Caffè Doppio"
+      ],
+      "price": 88,
+      "userId": "LRBBi_a21u",
+      "orderNumber": "9uA",
+      "ETA": "2022-05-20 23:17:36",
+      "orderTime": "23:14",
+      "status": "Delivered "
+    },
+    {
+      "id": [
+        1,
+        2
+      ],
+      "title": [
+        "Bryggkaffe",
+        "Caffè Doppio"
+      ],
+      "price": 88,
+      "userId": "YZlBU_YS57",
+      "orderNumber": "gf1",
+      "ETA": "2022-05-20 23:30:00",
+      "orderTime": "23:25"
     }
   ],
   "accounts": [
     {
-      "id": "7zInt3r6Lf",
-      "username": "priya",
-      "password": "almighty79"
+      "id": "ykXwGos9D8",
+      "username": "Test",
+      "password": "Test",
+      "email": "test@test.se"
     },
     {
-      "id": "MlTRNH0iJf",
-      "username": "cute",
-      "password": "priya"
+      "id": "LRBBi_a21u",
+      "username": "user",
+      "password": "user",
+      "email": "priya@gmail.com"
+    },
+    {
+      "id": "Z_HENb9HOJ",
+      "username": "user1",
+      "password": "user",
+      "email": "priya@gmail.com"
+    },
+    {
+      "id": "YZlBU_YS57",
+      "username": "user2",
+      "password": "user",
+      "email": "preethi@gmail.com"
     }
   ]
 }
